@@ -5,6 +5,7 @@ class Animal
 end
 
 
+
 class Fox < Animal
   attr_accessor :health
   def self.breeds
