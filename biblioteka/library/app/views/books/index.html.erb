@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:cover) %></th>
       <th><%= model_class.human_attribute_name(:author) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:isbn) %></th>
@@ -18,7 +19,8 @@
     <% @books.each do |book| %>
       <tr>
         <td><%= link_to book.id, book_path(book) %></td>
-        <td><%= book.author %></td>
+        <td><a href="<%= book.cover %>"><img src="<%= book.cover %>" width="80" height="240"></a></td>
+	<td><%= book.author %></td>
         <td><%= book.title %></td>
         <td><%= book.isbn %></td>
         <td><%= book.price %></td>

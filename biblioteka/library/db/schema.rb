@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(:version => 20121023105508) do
 
   create_table "books", :force => true do |t|
+    t.string   "cover"
     t.string   "author"
     t.string   "title"
     t.string   "isbn"
